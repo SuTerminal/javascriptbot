@@ -47,11 +47,13 @@ __Client__.login(process.env.BOT_TOKEN);
 process.on('exit', function (code) {
     __Client__.destroy();
     __Client__.login(process.env.BOT_TOKEN);
+    process.exit(1);
 });
 
 process.on('unhandledRejection', () => {
     __Client__.destroy();
     __Client__.login(process.env.BOT_TOKEN);
+        process.exit(1);
 });
 
 
