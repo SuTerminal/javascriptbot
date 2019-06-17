@@ -9,8 +9,13 @@ __Client__.on('ready', () => {
 
 __Client__.on('message', __discordMessage__ => {
     if (__discordMessage__.bot) return;
+    
 
     if (__discordMessage__.content.toLowerCase().startsWith('eval')) {
+        
+        if(message.author.id === '237176294394036224') {
+         return __discordMessage__.channel.send('you are blocked :cry:');
+        }
         code = __discordMessage__.content.slice(4);
 
 
